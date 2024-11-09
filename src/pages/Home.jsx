@@ -84,10 +84,7 @@ const Home = () => {
    
       {/* Background Illustration */}
       <div className="fixed -bottom-[0.1rem] sm:-bottom-20 sm:-right-20">
-        <motion.div className="w-full h-full relative" initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}>
+        <motion.div className="w-full h-full relative" >
           
         <Lottie animationData={slides[currentSlide].animation } loop={true} autoplay={true}   className="sm:w-[800px] md:w-[800px] lg:w-[1000px] sm:h-[800px] brightness-50 sm:brightness-75"/>
       
