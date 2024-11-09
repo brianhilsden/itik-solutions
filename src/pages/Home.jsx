@@ -123,6 +123,7 @@ const Home = () => {
                 <p className="text-lg text-gray-300 max-w-md mt-4">
                   {slides[currentSlide].description}
                 </p>
+                
               </motion.div>
             </AnimatePresence>
 
