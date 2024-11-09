@@ -35,6 +35,7 @@ const slides = [
       "Embrace cutting-edge technology to stay ahead of the competition. Our innovative solutions are designed to transform your business operations, bringing fresh ideas and unique approaches.",
     icon: Code,
     animation: innovation,
+    image: "https://res.cloudinary.com/dkwu8nd4d/image/upload/f_auto,q_auto/v1731039851/innovation_vti90i.png",
   },
   {
     title: "Scalability",
@@ -42,7 +43,9 @@ const slides = [
       "Build your business with growth in mind. Our solutions ensure your systems can scale effortlessly as your needs expand, supporting your journey from startup to enterprise.",
     icon: Server,
     animation: scalability,
+    image: "https://res.cloudinary.com/dkwu8nd4d/image/upload/f_auto,q_auto/v1731039864/scalability_yftupt.png",
   },
+
 
   {
     title: "Security",
@@ -50,6 +53,7 @@ const slides = [
       "Protect your assets and customer data with robust security measures. Our solutions provide peace of mind, ensuring your business and users are always safe from evolving threats.",
     icon: Shield,
     animation: security,
+    image: "https://res.cloudinary.com/dkwu8nd4d/image/upload/f_auto,q_auto/v1731039894/security_xyqgtg.png",
   },
   {
     title: "Reliable Support",
@@ -57,6 +61,7 @@ const slides = [
       "Benefit from our dedicated support team to ensure seamless integration and consistent performance. We’re here to assist you at every step with technical support and guidance.",
     icon: LifeBuoy,
     animation: support,
+    image: "https://res.cloudinary.com/dkwu8nd4d/image/upload/f_auto,q_auto/v1731039783/customization_zzxdwx.png",
   },
   {
     title: "User-Friendly Experience",
@@ -64,6 +69,7 @@ const slides = [
       "Deliver a seamless, intuitive experience for your users. Our designs focus on ease of use, ensuring users can navigate and interact with your systems effortlessly, enhancing satisfaction and engagement.",
     icon: Smile,
     animation: userExperience,
+    image: "https://res.cloudinary.com/dkwu8nd4d/image/upload/v1731039799/efficiency_a4y1m4.png",
   },
 
 ];
@@ -83,12 +89,28 @@ const Home = () => {
     <div className="relative min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-950 sm:p-24 pt-20 sm:pt-0 flex sm:items-center ">
    
       {/* Background Illustration */}
-      <div className="fixed -bottom-[0.1rem] sm:-bottom-20 sm:-right-20">
+      <div className="fixed hidden sm:block -bottom-[0.1rem] sm:-bottom-20 sm:-right-20">
         <motion.div className="w-full h-full relative" >
           
         <Lottie animationData={slides[currentSlide].animation } loop={true} autoplay={true}   className="sm:w-[800px] md:w-[800px] lg:w-[1000px] sm:h-[800px] brightness-50 sm:brightness-75"/>
       
         </motion.div>
+      </div>
+      <div className="sm:hidden fixed inset-0 flex sm:justify-end ">
+        <div className=" sm:max-w-[40%] w-full h-full relative">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentSlide}
+              src={slides[currentSlide].image}
+              alt="backgroundImage"
+              className="object-contain w-full h-full brightness-50 object-bottom "
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            />
+          </AnimatePresence>
+        </div>
       </div>
 
       <main className="max-w-7xl mx-auto px-6 py-12 relative z-10">
