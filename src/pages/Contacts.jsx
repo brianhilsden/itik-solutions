@@ -335,7 +335,7 @@ const Contact = () => {
                       transition={{ duration: 0.5 }}
                     >
                       <MapPin className="mr-2 h-4 w-4" />
-                      100 Smith Street, Kiambu Road
+                      123 Lumumba Drive, Nairobi
                     </Button>
                   </motion.div>
                 </div>
