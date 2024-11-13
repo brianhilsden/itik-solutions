@@ -71,7 +71,6 @@ const slides = [
     animation: userExperience,
     image: "https://res.cloudinary.com/dkwu8nd4d/image/upload/v1731039799/efficiency_a4y1m4.png",
   },
-
 ];
 
 const Home = () => {

@@ -309,9 +309,11 @@ const ProductsServices = () => {
                 <h3 className="text-lg font-semibold text-neutral-dark">
                   Additional Information
                 </h3>
-                <p className="text-neutral-dark">
-                  {drawerContent.additionalDetails}
-                </p>
+                <ol className="text-neutral-dark">
+                  {drawerContent.additionalDetails?.map((item,index)=>(
+                        <li key={index} className="mb-2">{item} </li>
+                  ))}
+                </ol>
               </motion.div>
             </div>
             <div className="flex gap-2 justify-center ">
