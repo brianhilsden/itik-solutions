@@ -21,7 +21,7 @@ export default function Footer() {
     { icon: Phone, info: "+254725475051", label: "Phone" },
     { icon: Phone, info: "+254798338083", label: "Phone" },
 
-    { icon: MapPin, info: "123 Lumumba Drive, Nairobi, 12345", label: "Address" },
+    { icon: MapPin, info: "123 Lumumba Drive, Nairobi", label: "Address" },
   ];
 
   const footerLinks = [
